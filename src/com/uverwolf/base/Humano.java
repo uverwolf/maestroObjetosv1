@@ -1,12 +1,15 @@
 package com.uverwolf.base;
 
 public class Humano {
-	private String nombre;
-	private int fuerza=3,sigilo=3,inteligencia = 3;
-	private int vida =100;
-Humano (String nombre){
-	this.nombre = nombre;
-}
+	protected String nombre;
+	protected int fuerza=3,sigilo=3,inteligencia = 3;
+	protected int vida =100;
+	public Humano() {
+		
+	}
+	public Humano (String nombre){
+		this.nombre = nombre;
+	}
 	public void atacar(Humano target,int fuerza) {
 		System.out.println(this.nombre+" a atacado a "+target.getNombre()+".\n"+target.getNombre()+" pierde "+fuerza+" de vida!!");
 		target.vida-=fuerza;
